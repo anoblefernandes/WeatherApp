@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Dashboard</title>
+    <!-- Add Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <script src="https://kit.fontawesome.com/b3eb5c11d9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<!-- Jumbotron for Title -->
+    <div class="container">
+        <div class="jumbotron" style="background-color: rgb(40, 44, 54) ; color: white;">
+            <h1 class="text-center">
+              <strong>
+                <i class="fas fa-cloud-sun-rain"></i> Weather Dashboard</strong>
+            </h1>
+        </div>
+    </div>
+
+<!-- Row for Searching and Displaying Weather by City -->
+    <div class="row">    
+        <div class="col-sm-3">
+            <br>
+    <!-- First card is for handling the search parameters -->
+          <div class="card">
+            <div class="card-header">
+              <strong>
+                <i class="fas fa-cloud-sun"></i> Search by City for Weather</strong>
+            </div>           
+            <div class="card-body">
+    <!-- Create an HTML Form for handling the city inputs-->
+              <form role="form">
+    <!-- Create the text box for capturing the city search term-->
+                <div class="form-group">
+                  <label for="search">City:</label>
+                  <input type="text" class="form-control" id="search-term">
+                </div> 
+    <!-- Capture the previous city searched -->
+                <div class="form-group">
+                  <label>Previous City Searched:</label>
+                  <input type="text" class="form-control" id="previous-term">
+                </div>
+    <!-- Here we have our final submit button -->
+                <button type="submit" class="btn btn-default" id="run-search">
+                  <i class="fa fa-search"></i> Search</button>
+                <button class="btn btn-default" id="clear-all">
+                  <i class="fa fa-trash"></i> Clear Results</button>  
+              </form>
+          </div>
+        </div>
+      </div>
+  
+<!-- This column will handle all of the retrieved weather data -->
+        <div class="col-sm-9">
+          <br>
+    <!-- This card will initially be made up of a card and showing the current weather data retrieved -->
+          <div class="card">
+            <div class="card-header">
+              <strong>
+                <i class="fas fa-bolt"></i> Current Weather</strong>
+            </div>
+            <div class="card-body" id="weather-section">
+            </div>
+            <br>
+    <!-- This card will initially be made up of a card and showing the 5 day forecast data retrieved -->
+            <div class="card">
+              <div class="card-header">
+                <strong>
+                  <i class="fas fa-cloud-moon-rain"></i> 5 Day Forecast</strong>
+              </div>
+              <div class="card-body" id="forecast-section">
+              </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- jQuery JS -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+  
+    <!-- Code to the JavaScript File -->
+    <script src="weatherApp.js"></script>
+
+</body>
+</html>
